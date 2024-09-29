@@ -3,7 +3,6 @@ let dbConnection;
 
 const uri='mongodb+srv://ayushgunjal2025:ayushgunjal@cluster0.tyxfs.mongodb.net/sampleDb?retryWrites=true&w=majority';
 
-
 module.exports={
     connectToDb:(callback)=>{
         MongoClient.connect(uri)
