@@ -1,10 +1,14 @@
-const express= require('express');
+const express = require('express');
 const cors = require('cors');
-app.use(cors());
+const app = express();  // Moved above app.use(cors());
 
-const {connectToDb,getDb}=require('./db');
-const app=express();
+app.use(cors());  // Enable CORS
+
 app.use(express.json());
+
+// Continue with your database connection and routes
+const {connectToDb,getDb}=require('./db');
+
 let db;
 
 connectToDb((err)=>{
